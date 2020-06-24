@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Filters>
+        <FilterCountries>
+            <Remove ID="*" />
+            <Add ID="BRA" />
+            <Add ID="CHL" />
+            <Add ID="COL" />
+            <Add ID="CRI" />
+            <Add ID="ECU" />
+            <Add ID="MEX" />
+            <Add ID="NLD" />
+            <Add ID="PER" />
+            <Add ID="PRT" />
+            <Remove ID="GTM" />
+        </FilterCountries>
+        <FilterBanks>
+            <Add ID="*" />
+            <Remove ID="8183" />
+            <Remove ID="8339" />
+            <Remove ID="1084" />
+            <Remove ID="4081" />
+            <Remove ID="1022" />
+            <Remove ID="8366" />
+            <Remove ID="1023" />
+            <Remove ID="8210" />
+            <Remove ID="8338" />
+            <Remove ID="8187" />
+            <Remove ID="8234" />
+            <Remove ID="1053" />
+            <Remove ID="1026" />
+            <Remove ID="1052" />
+            <Remove ID="8191" />
+            <Remove ID="8246" />
+        </FilterBanks>
+        <FilterCurrencies>
+            <Add ID="*">
+                <Parameters />
+            </Add>
+        </FilterCurrencies>
+        <FilterChannels>
+            <Remove ID="2">
+                <Parameters />
+            </Remove>
+            <Add ID="4">
+                <Parameters>
+                    <Parameter name="ShopperExpirationTime" value="-56" />
+                </Parameters>
+            </Add>
+        </FilterChannels>
+    </Filters>
+    <CommandSettings>
+        <Hide Target="ListCashBanks">
+            <Parameters />
+        </Hide>
+        <Show Target="ReservationNumber">
+            <Parameters>
+                <Parameter name="MessageText" value="Reserva" />
+            </Parameters>
+        </Show>
+        <Hide Target="WaitingState">
+            <Parameters />
+        </Hide>
+        <Hide Target="GoBackToTheMerchantLink">
+            <Parameters>
+                <Parameter name="Channel" value="*" />
+            </Parameters>
+        </Hide>
+    </CommandSettings>
+    <DefaultSettings>
+        <Setting Name="IsAllowPaymentOption" Value="true">
+            <Parameters />
+        </Setting>
+        <Setting Name="IsConditionalCountryList" Value="true" />
+    </DefaultSettings>
+</Configuration>

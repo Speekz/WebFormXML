@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XML TEST</title>
+    <script type="text/javascript" src="js/XMLGenerator.js"></script>
+    <script type="text/javascript" src="js/XMLValidation.js"></script>
+</head>
+<body>
+<form action="" method="post">
+    <!--<label for="firstname">First Name:</label>
+    <input type="text" name="firstname" id="firstname">-->
+    <label class="switch">
+        <input type="checkbox">
+    </label>
+    <a>All or None</a>
+    <label for="country">
+        <select id="country" name="country" multiple size="10">
+            <option value="BRA">Brazil</option>
+            <option value="CHL">Chile</option>
+            <option value="COL">Colombia</option>
+            <option value="ECU">Ecuador</option>
+            <option value="CRI">Costa Rica</option>
+            <option value="MEX">Mexico</option>
+            <option value="SVR">El Salvador</option>
+            <option value="PAN">Panama</option>
+            <option value="GTM">Guatemala</option>
+            <option value="PER">Peru</option>
+            <option value="SPE">Spain</option>
+            <option value="BEL">Belgium</option>
+            <option value="GER">Germany</option>
+            <option value="AUS">Austria</option>
+            <option value="NLD">Netherlands</option>
+            <option value="ITL">Italy</option>
+            <option value="POR">Portugal</option>
+        </select>
+    </label>
+
+    <!--<label for="lastName">Last Name:</label>
+<input type="text" name="lastname" id="lastname">-->
+
+    <button type="button" id="submitButton" onclick="submit(this.form)">submit</button>
+    <button type="button" onclick="download(this.form)" id="downloadButton">Download</button>
+</form>
+<p>Check XML: <input type="button" value="Check XML" onclick="validateXML('xml')"></p>
+<label for="xml"></label>
+<textarea id="xml" rows="10" style="width:100%" cols="20" name="xml"></textarea>
+</body>
+</html>
